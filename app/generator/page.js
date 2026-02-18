@@ -6,7 +6,6 @@ import JobInput from '@/components/JobInput';
 import OutputPanel from '@/components/OutputPanel';
 import ScoreCard from '@/components/ScoreCard';
 import ExportPDF from '@/components/ExportPDF';
-import Logo from '@/components/Logo';
 import { Sparkles, Loader2, Key, CreditCard } from 'lucide-react';
 
 export default function GeneratorPage() {
@@ -21,7 +20,7 @@ export default function GeneratorPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const saved = localStorage.getItem('resuboost_license');
+    const saved = localStorage.getItem('resumsnap_license');
     if (saved) {
       setLicenseKey(saved);
       validateKey(saved);
@@ -47,11 +46,11 @@ export default function GeneratorPage() {
 
       setKeyValidated(true);
       setCredits(data.creditsRemaining);
-      localStorage.setItem('resuboost_license', key.trim().toUpperCase());
+      localStorage.setItem('resumsnap_license', key.trim().toUpperCase());
     } catch (err) {
       setError(err.message);
       setKeyValidated(false);
-      localStorage.removeItem('resuboost_license');
+      localStorage.removeItem('resumsnap_license');
     } finally {
       setValidating(false);
     }
@@ -97,30 +96,33 @@ export default function GeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       
-     {/* Header */}
-<header className="bg-gray-900 border-b border-gray-800 px-4 sm:px-8 py-3.5 flex items-center justify-between sticky top-0 z-50 shadow-lg">
-  <Link href="/" className="hover:opacity-80 transition-opacity">
-    <div className="flex items-center gap-2.5">
-      <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center font-bold text-white shadow-md text-sm">
-        <span>R</span>
-      </div>
-      <span className="text-lg font-black text-white">
-        ResuBoost
-      </span>
-    </div>
-  </Link>
-  <div className="flex items-center gap-3">
-    {keyValidated && credits !== null && (
-      <div className="flex items-center gap-2 px-2.5 py-1.5 bg-green-900/50 border border-green-700 rounded-lg backdrop-blur-sm">
-        <CreditCard size={14} className="text-green-400" />
-        <span className="text-xs font-semibold text-green-300">
-          {credits} {credits === 1 ? 'credit' : 'credits'}
-        </span>
-      </div>
-    )}
-    {result && <ExportPDF content={result.optimizedResume} />}
-  </div>
-</header>
+      {/* DARK STICKY NAVBAR */}
+      <header className="bg-gray-900 border-b border-gray-800 px-4 sm:px-8 py-3.5 
+                         flex items-center justify-between sticky top-0 z-50 shadow-lg backdrop-blur-sm">
+        <Link href="/" className="hover:opacity-80 transition-opacity">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg 
+                          flex items-center justify-center font-bold text-white shadow-md text-sm">
+              <span>R</span>
+            </div>
+            <span className="text-lg font-black text-white">
+              ResuSnap
+            </span>
+          </div>
+        </Link>
+        <div className="flex items-center gap-3">
+          {keyValidated && credits !== null && (
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-green-500/20 border border-green-500/30 
+                          rounded-lg backdrop-blur-sm">
+              <CreditCard size={14} className="text-green-400" />
+              <span className="text-xs font-semibold text-green-300">
+                {credits} {credits === 1 ? 'credit' : 'credits'}
+              </span>
+            </div>
+          )}
+          {result && <ExportPDF content={result.optimizedResume} />}
+        </div>
+      </header>
 
       <main className="max-w-6xl mx-auto px-4 sm:px-8 py-8">
 
@@ -158,7 +160,7 @@ export default function GeneratorPage() {
                   </button>
                 </div>
                 <p className="text-xs text-gray-500 mt-3">
-                  Don&apos;t have a key? <a href="https://resume-optimizer-peo7qyhrh-emmabsys-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-medium">Purchase ResuBoost ($19)</a>
+                  Don&apos;t have a key? <a href="https://maikuri.gumroad.com/l/kwxxcn?_gl=1*5psx4a*_ga*NjE3MjQ2MTc5LjE3NjM4MTkxOTg.*_ga_6LJN6D94N6*czE3NzE0MzYxNjkkbzQ3JGcxJHQxNzcxNDM4MzYxJGo5JGwwJGgw" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-medium">Purchase ResuSnap ($19)</a>
                 </p>
               </div>
             </div>

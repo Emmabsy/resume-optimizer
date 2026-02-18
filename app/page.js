@@ -1,18 +1,25 @@
 import Link from 'next/link';
 import { Sparkles, Zap, Shield, TrendingUp, Check, ArrowRight } from 'lucide-react';
-import Logo from '@/components/Logo';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Logo />
+      {/* DARK STICKY NAVIGATION */}
+      <nav className="bg-gray-900 border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+        <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg 
+                          flex items-center justify-center font-bold text-white shadow-md text-sm">
+              <span>R</span>
+            </div>
+            <span className="text-lg font-black text-white">
+              ResuSnap
+            </span>
+          </div>
           <Link
             href="/generator"
-            className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-colors"
+            className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
           >
             Open App
           </Link>
@@ -24,7 +31,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
         
         <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 
                         bg-white/10 backdrop-blur-sm border border-white/20 
                         rounded-full text-xs font-medium text-white">
@@ -32,7 +38,6 @@ export default function Home() {
             <span>AI-Powered Resume Optimization</span>
           </div>
           
-          {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-5">
             Stop Getting Rejected<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
@@ -40,16 +45,14 @@ export default function Home() {
             </span>
           </h1>
           
-          {/* Subheadline */}
           <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
             AI rewrites your resume to match any job description in 30 seconds. 
             Get past the robots. Land the interview.
           </p>
           
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://YOUR-GUMROAD-LINK.gumroad.com/l/resuboost"
+              href="https://YOUR-GUMROAD.gumroad.com/l/resumsnap"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 
@@ -172,7 +175,7 @@ export default function Home() {
             
             <ul className="text-left max-w-md mx-auto mb-8 space-y-2.5 text-sm">
               {[
-                'Instant access to ResuBoost',
+                'Instant access to ResuSnap',
                 '100 resume optimizations',
                 'Unlimited job descriptions',
                 'ATS match scoring',
@@ -188,14 +191,14 @@ export default function Home() {
             
             
             <a
-              href="https://resume-optimizer-peo7qyhrh-emmabsys-projects.vercel.app/"
+              href="https://YOUR-GUMROAD.gumroad.com/l/resumsnap"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-10 py-4 bg-white hover:bg-gray-50 
                        text-blue-700 text-lg font-bold rounded-xl 
                        transition-all shadow-xl hover:shadow-2xl hover:scale-105"
             >
-              Get ResuBoost Now →
+              Get ResuSnap Now →
             </a>
             
             <p className="mt-5 text-xs text-blue-200">
@@ -206,13 +209,21 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-10">
+      <footer className="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <div className="flex justify-center mb-3">
-            <Logo size="default" />
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg 
+                            flex items-center justify-center font-bold text-white shadow-md text-base">
+                <span>R</span>
+              </div>
+              <span className="text-xl font-black text-white">
+                ResuSnap
+              </span>
+            </div>
           </div>
           <p className="mb-3 text-white text-sm">Beat ATS systems. Land more interviews.</p>
-          <p className="text-xs">© 2026 ResuBoost. All rights reserved.</p>
+          <p className="text-xs">© 2026 ResuSnap. All rights reserved.</p>
         </div>
       </footer>
 
