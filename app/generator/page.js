@@ -140,15 +140,15 @@ export default function GeneratorPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-2.5">
                   <input
-                    type="text"
-                    value={licenseKey}
-                    onChange={(e) => setLicenseKey(e.target.value.toUpperCase())}
-                    placeholder="XXXX-XXXX-XXXX-XXXX"
-                    className="flex-1 px-3.5 py-2.5 border border-gray-300 rounded-lg
-                               focus:border-blue-500 focus:outline-none text-sm font-mono
-                               uppercase"
-                    maxLength={19}
-                  />
+  type="text"
+  value={licenseKey}
+  onChange={(e) => setLicenseKey(e.target.value.toUpperCase())}
+  placeholder="XXXX-XXXX-XXXX-XXXX"
+  className="flex-1 px-3.5 py-2.5 border border-gray-300 rounded-lg
+             focus:border-blue-500 focus:outline-none text-sm font-mono
+             uppercase"
+  maxLength={50}  // CHANGED FROM 19 to 50
+/>
                   <button
                     onClick={handleValidate}
                     disabled={validating || licenseKey.length < 10}
@@ -160,7 +160,7 @@ export default function GeneratorPage() {
                   </button>
                 </div>
                 <p className="text-xs text-gray-500 mt-3">
-                  Don&apos;t have a key? <a href="https://maikuri.gumroad.com/l/kwxxcn?_gl=1*5psx4a*_ga*NjE3MjQ2MTc5LjE3NjM4MTkxOTg.*_ga_6LJN6D94N6*czE3NzE0MzYxNjkkbzQ3JGcxJHQxNzcxNDM4MzYxJGo5JGwwJGgw" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-medium">Purchase ResuSnap ($19)</a>
+                  Don&apos;t have a key? <a href="https://maikuri.gumroad.com/l/kwxxcn" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-medium">Purchase ResuSnap ($19)</a>
                 </p>
               </div>
             </div>

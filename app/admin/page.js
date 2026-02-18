@@ -209,15 +209,15 @@ export default function AdminPage() {
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 License Key from Gumroad
               </label>
-              <input
-                type="text"
-                value={manualKey}
-                onChange={(e) => setManualKey(e.target.value.toUpperCase())}
-                placeholder="XXXX-XXXX-XXXX-XXXX"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl
-                         focus:border-blue-500 focus:outline-none font-mono uppercase"
-                maxLength={19}
-              />
+           <input
+  type="text"
+  value={manualKey}
+  onChange={(e) => setManualKey(e.target.value.toUpperCase())}
+  placeholder="XXXX-XXXX-XXXX-XXXX"
+  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl
+           focus:border-blue-500 focus:outline-none font-mono uppercase"
+  maxLength={50}  // CHANGED FROM 19 to 50
+/>
             </div>
 
             <div>
