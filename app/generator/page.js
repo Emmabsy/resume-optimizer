@@ -158,7 +158,7 @@ export default function GeneratorPage() {
                   </button>
                 </div>
                 <p className="text-xs text-gray-500 mt-3">
-                  Don&apos;t have a key? <a href="https://YOUR-GUMROAD-LINK.gumroad.com/l/resuboost" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-medium">Purchase ResuBoost ($19)</a>
+                  Don&apos;t have a key? <a href="https://resume-optimizer-peo7qyhrh-emmabsys-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-medium">Purchase ResuBoost ($19)</a>
                 </p>
               </div>
             </div>

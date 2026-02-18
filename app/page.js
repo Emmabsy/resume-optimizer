@@ -188,7 +188,7 @@ export default function Home() {
             
             
             <a
-              href="https://YOUR-GUMROAD-LINK.gumroad.com/l/resuboost"
+              href="https://resume-optimizer-peo7qyhrh-emmabsys-projects.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-10 py-4 bg-white hover:bg-gray-50 
