@@ -52,7 +52,7 @@ export default function Home() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://YOUR-GUMROAD.gumroad.com/l/resumsnap"
+              href="https://maikuri.gumroad.com/l/kwxxcn"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 
@@ -101,67 +101,69 @@ export default function Home() {
       </div>
 
       {/* How It Works */}
-      <div className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-3">
-              How It Works
-            </h2>
-            <p className="text-lg text-gray-600">
-              Four simple steps to a better resume
-            </p>
+<div className="py-16 bg-white">
+  <div className="max-w-5xl mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-3">
+        How It Works
+      </h2>
+      <p className="text-lg text-gray-600">
+        Four simple steps to a better resume
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      {[
+        { num: '1', title: 'Purchase', desc: 'Get instant access with 100 credits', icon: '💳' },
+        { num: '2', title: 'Upload or Paste', desc: 'Add resume as PDF/Word or paste text', icon: '📄' },
+        { num: '3', title: 'AI Optimizes', desc: 'Matches keywords from job description', icon: '✨' },
+        { num: '4', title: 'Download & Apply', desc: 'Export PDF and get interviews', icon: '🎯' },
+      ].map((step) => (
+        <div key={step.num} className="text-center">
+          <div className="w-14 h-14 mx-auto mb-3 bg-gradient-to-br from-blue-100 to-purple-100 
+                        rounded-xl flex items-center justify-center text-2xl">
+            {step.icon}
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { num: '1', title: 'Purchase', desc: 'Get instant access with 100 credits', icon: '💳' },
-              { num: '2', title: 'Paste', desc: 'Add your resume and job description', icon: '📋' },
-              { num: '3', title: 'Optimize', desc: 'AI rewrites to match keywords', icon: '✨' },
-              { num: '4', title: 'Apply', desc: 'Export PDF and get interviews', icon: '🎯' },
-            ].map((step) => (
-              <div key={step.num} className="text-center">
-                <div className="w-14 h-14 mx-auto mb-3 bg-gradient-to-br from-blue-100 to-purple-100 
-                              rounded-xl flex items-center justify-center text-2xl">
-                  {step.icon}
-                </div>
-                <div className="text-xs font-bold text-blue-600 mb-1.5">STEP {step.num}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-1.5">{step.title}</h3>
-                <p className="text-sm text-gray-600">{step.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className="text-xs font-bold text-blue-600 mb-1.5">STEP {step.num}</div>
+          <h3 className="text-lg font-bold text-gray-900 mb-1.5">{step.title}</h3>
+          <p className="text-sm text-gray-600">{step.desc}</p>
         </div>
-      </div>
-
-      {/* Features */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-3">
-              Everything You Need
-            </h2>
+      ))}
+    </div>
+  </div>
+</div>
+{/* Features - DARKER VERSION */}
+<div className="py-16 bg-gray-800">
+  <div className="max-w-5xl mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-black text-white mb-3">
+        Everything You Need
+      </h2>
+      <p className="text-gray-400">
+        All the features to optimize your resume and land interviews
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        { icon: <TrendingUp size={20} />, title: 'ATS Match Score', desc: 'See exactly how well your resume matches' },
+        { icon: <Check size={20} />, title: 'Keyword Analysis', desc: 'Know which keywords were added' },
+        { icon: <Sparkles size={20} />, title: 'Smart Rewriting', desc: 'AI preserves your experience' },
+        { icon: <Shield size={20} />, title: 'Privacy First', desc: 'Your data is never stored' },
+        { icon: <Zap size={20} />, title: 'Instant Results', desc: 'Get results in under 30 seconds' },
+        { icon: <Check size={20} />, title: 'PDF Export', desc: 'Download professional PDFs' },
+      ].map((feature, i) => (
+        <div key={i} className="p-5 bg-gray-900 rounded-xl border border-gray-700 hover:border-gray-600 transition-all">
+          <div className="w-10 h-10 mb-3 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400">
+            {feature.icon}
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: <TrendingUp size={20} />, title: 'ATS Match Score', desc: 'See exactly how well your resume matches' },
-              { icon: <Check size={20} />, title: 'Keyword Analysis', desc: 'Know which keywords were added' },
-              { icon: <Sparkles size={20} />, title: 'Smart Rewriting', desc: 'AI preserves your experience' },
-              { icon: <Shield size={20} />, title: 'Privacy First', desc: 'Your data is never stored' },
-              { icon: <Zap size={20} />, title: 'Instant Results', desc: 'Get results in under 30 seconds' },
-              { icon: <Check size={20} />, title: 'PDF Export', desc: 'Download professional PDFs' },
-            ].map((feature, i) => (
-              <div key={i} className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 mb-3 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
-                  {feature.icon}
-                </div>
-                <h3 className="text-base font-bold text-gray-900 mb-1.5">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
+          <h3 className="text-base font-bold text-white mb-1.5">{feature.title}</h3>
+          <p className="text-sm text-gray-400">{feature.desc}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Pricing */}
       <div className="py-16 bg-white">
